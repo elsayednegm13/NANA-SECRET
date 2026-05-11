@@ -25,6 +25,7 @@ It focuses on modern UI, smooth animations, responsive layouts, and easy browsin
   - Grid and list views
   - 3, 4, or 5-column grid display
 - News page with articles, gallery, and video link
+- Admin dashboard for adding, editing, deleting, exporting, and importing news
 - Contact page with phone, email, location, WhatsApp, Facebook, and YouTube
 - Brand colors inspired by gold and orange identity
 
@@ -44,6 +45,20 @@ It focuses on modern UI, smooth animations, responsive layouts, and easy browsin
 | Products | `products.html` |
 | News | `news.html` |
 | Contact | `contact.html` |
+| Admin Dashboard | `admin.html` |
+
+## Admin Dashboard
+
+Open `admin.html` to manage dynamic news.
+
+Default login:
+
+```text
+Username: ADMIN
+Password: 123
+```
+
+News added from the dashboard is stored in the browser local storage and appears automatically on the homepage and news page.
 
 ## Project Structure
 
@@ -55,11 +70,14 @@ nana-secret-site/
 ├── products.html
 ├── news.html
 ├── contact.html
+├── admin.html
 ├── assets/
 │   ├── css/
 │   │   └── styles.css
 │   ├── js/
 │   │   ├── main.js
+│   │   ├── news-store.js
+│   │   ├── admin.js
 │   │   └── products.js
 │   └── images/
 │       ├── logo.webp

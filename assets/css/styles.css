@@ -1545,6 +1545,300 @@ html[dir="ltr"] .gallery-item::after {
   font-weight: 800;
 }
 
+.admin-shell {
+  display: grid;
+  gap: 22px;
+}
+
+.admin-message {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--muted);
+  font-weight: 900;
+}
+
+.admin-message:empty {
+  display: none;
+}
+
+.admin-message[data-type="success"] {
+  color: #176d38;
+  border-color: rgba(23, 109, 56, 0.24);
+  background: rgba(23, 109, 56, 0.08);
+}
+
+.admin-message[data-type="error"] {
+  color: #a31212;
+  border-color: rgba(163, 18, 18, 0.24);
+  background: rgba(163, 18, 18, 0.08);
+}
+
+.admin-login-card,
+.admin-toolbar,
+.admin-form,
+.admin-list-panel {
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 12px 35px rgba(23, 20, 15, 0.08);
+}
+
+.admin-login-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 28px;
+  align-items: center;
+  padding: 34px;
+}
+
+.admin-login-card h2,
+.admin-toolbar h2 {
+  margin: 0;
+  line-height: 1.35;
+  font-size: 2rem;
+}
+
+.admin-login-card p,
+.admin-toolbar p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.admin-panel {
+  display: grid;
+  gap: 22px;
+}
+
+.admin-panel[hidden],
+.admin-login-card[hidden] {
+  display: none;
+}
+
+.admin-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 24px;
+}
+
+.admin-toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  gap: 22px;
+  align-items: start;
+}
+
+.admin-form {
+  display: grid;
+  gap: 16px;
+  padding: 26px;
+}
+
+.admin-form.compact {
+  box-shadow: none;
+  background: rgba(255, 250, 240, 0.8);
+}
+
+.admin-form-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.admin-form h3,
+.admin-list-panel h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.35rem;
+}
+
+.admin-form label {
+  display: grid;
+  gap: 8px;
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.form-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.form-grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.admin-form input,
+.admin-form textarea {
+  width: 100%;
+  border: 1px solid rgba(23, 20, 15, 0.16);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--ink);
+  padding: 12px 14px;
+  outline: 0;
+  resize: vertical;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus {
+  border-color: var(--deep-orange);
+  box-shadow: 0 0 0 4px rgba(255, 140, 0, 0.18);
+}
+
+.admin-preview-card {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.admin-preview-card img {
+  width: 150px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: calc(var(--radius) - 2px);
+  background:
+    linear-gradient(135deg, rgba(23, 20, 15, 0.95), rgba(22, 63, 92, 0.78)),
+    var(--ink);
+  padding: 8px;
+}
+
+.admin-preview-card p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 900;
+}
+
+.admin-list-panel {
+  position: sticky;
+  top: 110px;
+  display: grid;
+  gap: 16px;
+  padding: 22px;
+}
+
+.admin-news-list {
+  display: grid;
+  gap: 12px;
+}
+
+.admin-news-row {
+  display: grid;
+  grid-template-columns: 86px minmax(0, 1fr);
+  gap: 12px;
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.admin-news-row img {
+  width: 86px;
+  height: 74px;
+  object-fit: contain;
+  border-radius: calc(var(--radius) - 2px);
+  background:
+    linear-gradient(135deg, rgba(23, 20, 15, 0.95), rgba(22, 63, 92, 0.76)),
+    var(--ink);
+  padding: 6px;
+}
+
+.admin-news-row-content {
+  min-width: 0;
+}
+
+.admin-news-row strong,
+.admin-news-row span,
+.admin-news-row p {
+  display: block;
+}
+
+.admin-news-row strong {
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+.admin-news-row span {
+  color: var(--deep-orange);
+  font-weight: 900;
+  font-size: 0.88rem;
+}
+
+.admin-news-row p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: 0.92rem;
+}
+
+.admin-row-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.danger-button,
+.import-button {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: var(--radius);
+  padding: 9px 14px;
+  font-weight: 900;
+}
+
+.danger-button {
+  background: #14110d;
+  color: var(--gold);
+}
+
+.import-button {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--gold), var(--deep-orange));
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.import-button input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.admin-empty {
+  padding: 18px;
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--muted);
+  text-align: center;
+  font-weight: 900;
+}
+
 .site-footer {
   background: var(--ink);
   color: #fff;
@@ -1699,7 +1993,9 @@ body.enhanced .reveal.is-visible {
 
   .article-layout,
   .news-page-layout,
-  .contact-layout {
+  .contact-layout,
+  .admin-grid,
+  .admin-login-card {
     grid-template-columns: 1fr;
   }
 
@@ -1711,7 +2007,8 @@ body.enhanced .reveal.is-visible {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .article-aside {
+  .article-aside,
+  .admin-list-panel {
     position: relative;
     top: auto;
   }
@@ -1824,6 +2121,15 @@ body.enhanced .reveal.is-visible {
     align-items: flex-start;
     flex-direction: column;
   }
+
+  .admin-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-toolbar-actions {
+    width: 100%;
+  }
 }
 
 @media (max-width: 620px) {
@@ -1891,8 +2197,30 @@ body.enhanced .reveal.is-visible {
   .news-card-content,
   .article-card,
   .article-aside,
-  .contact-form {
+  .contact-form,
+  .admin-form,
+  .admin-list-panel,
+  .admin-login-card,
+  .admin-toolbar {
     padding: 24px;
+  }
+
+  .form-grid.two,
+  .admin-preview-card,
+  .admin-news-row {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-preview-card img,
+  .admin-news-row img {
+    width: 100%;
+    height: 160px;
+  }
+
+  .admin-toolbar-actions > *,
+  .admin-form .button,
+  .admin-row-actions > * {
+    width: 100%;
   }
 
   .article-cover {
