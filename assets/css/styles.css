@@ -978,6 +978,8 @@ html[dir="ltr"] .page-hero-shade {
 }
 
 .team-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
   position: relative;
   overflow: hidden;
   border-radius: var(--radius);
@@ -1011,26 +1013,44 @@ html[dir="ltr"] .page-hero-shade {
 }
 
 .team-info {
-  padding: 22px;
+  min-height: 254px;
+  display: grid;
+  grid-template-rows: 58px 46px 1fr;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  padding: 28px 18px 24px;
 }
 
 .team-info span {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--deep-orange);
   font-weight: 900;
-  margin-bottom: 8px;
+  margin-bottom: 0;
+  min-height: 58px;
+  line-height: 1.45;
+  text-align: center;
 }
 
 .team-info h3 {
-  margin: 0 0 10px;
-  font-size: 1.25rem;
+  margin: 0;
+  font-size: 1.32rem;
   line-height: 1.35;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .team-info p {
   margin: 0;
   color: var(--muted);
   line-height: 1.7;
+  max-width: 22ch;
+  text-align: center;
 }
 
 .strategy-grid {
